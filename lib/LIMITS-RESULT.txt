@@ -1,0 +1,32 @@
+KALSHI RATE LIMIT DIAGNOSTIC
+started 20260803123425
+script dir: D:\Downloads\NightSharkV2\lib
+
+==== GET /trade-api/v2/account/limits ====
+EMPTY RESPONSE
+  -> either unauthenticated, blocked, or endpoint absent
+
+==== GET /trade-api/v2/account ====
+EMPTY RESPONSE
+  -> either unauthenticated, blocked, or endpoint absent
+
+==== GET /trade-api/v2/portfolio/balance ====
+EMPTY RESPONSE
+  -> either unauthenticated, blocked, or endpoint absent
+
+==== GET /trade-api/v2/exchange/status ====
+LENGTH 324
+{"exchange_active":true,"exchange_index_statuses":[{"exchange_active":true,"exchange_index":0,"intra_exchange_transfers_active":true,"trading_active":true},{"exchange_active":true,"exchange_index":1,"intra_exchange_transfers_active":true,"trading_active":false}],"intra_exchange_transfers_active":true,"trading_active":true}
+
+==== HOW TO READ THIS ====
+Look for a WRITE refill rate / writes-per-second value.
+  <=10/sec : fast maker NOT buildable on this tier
+  20-30    : marginal, one market only
+  >=50     : buildable
+
+If /portfolio/balance returned data but /account/limits was EMPTY,
+auth works and the limits endpoint simply is not exposed — in that
+case the tier has to come from Kalshi directly.
+
+If EVERYTHING was empty, HttpGet is not signing requests.
+DONE 20260803123427

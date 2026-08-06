@@ -1,0 +1,5 @@
+{
+    "areas": [],
+    "code": "loop{\nread_areas()\n}",
+    "points": []
+}

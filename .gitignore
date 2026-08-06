@@ -1,0 +1,9 @@
+# Credentials — never commit these
+reactions/apikey.json
+reactions/privatekey.json
+
+# Runtime logs
+@logs/
+
+# Large runtime data (exceeds GitHub 100MB limit)
+lib/Collector-Data/trades.txt

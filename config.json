@@ -1,0 +1,14 @@
+{
+    "area_color": "0x5500D500",
+    "hotkeys": {
+        "new_area": "!a",
+        "new_point": "!c",
+        "showsettingswindow": "!s",
+        "stop": "F2"
+    },
+    "last_win_size": [
+        1938,
+        1048
+    ],
+    "reaction_file": "reactions\\Kalshi-Diagnostic-Limits.json"
+}

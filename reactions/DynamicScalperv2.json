@@ -1,0 +1,5 @@
+{
+    "areas": [],
+    "code": "L1 := 75 \nPL1 := 60\nL2 := 70 \nPL2Pct := 0.7 \nmaxLossPerTrade := -115\ndailyMaxLoss := -15000\nDailyprofitLevel1 := 1500\nDailyCapturePct:= 0.7\nLossStreak:= 1\n\n;Main Constructor\nmyScalper := new DynamicScalper(L1, PL1, L2, PL2Pct, maxLossPerTrade, dailyMaxLoss, DailyprofitLevel1, DailyCapturePct, LossStreak)\n\n;start the main routine\nmyScalper.Start()\n",
+    "points": []
+}
