@@ -1,9 +1,36 @@
 # Credentials — never commit these
+.env
+.env.*
+!.env.example
 reactions/apikey.json
 reactions/privatekey.json
+privatekey_runtime.pem
 
 # Runtime logs
 @logs/
+*.log
 
 # Large runtime data (exceeds GitHub 100MB limit)
 lib/Collector-Data/trades.txt
+
+# Binaries and build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.traineddata
+*.pro.user
+*.user
+build/
+dist/
+
+# Python checks
+__pycache__/
+*.pyc
+.venv/
